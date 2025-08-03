@@ -203,7 +203,7 @@ async function getBalance() {
 
 async function fetchPrice() {
   try {
-    const res = await fetch("https://api.geckoterminal.com/api/v2/networks/bitkub_chain/pools/0x559be194fb9d3b8993971f3ec4aad6d1f5beb635");
+    const res = await fetch("https://api.geckoterminal.com/api/v2/networks/bitkub_chain/pools/0xf42d65b190bb78fb8ead8a92110b653722f96048");
     const data = await res.json();
     const price = parseFloat(data.data.attributes.base_token_price_usd || 0).toFixed(8);
     document.getElementById("price").innerText = "$" + price + " USD";
